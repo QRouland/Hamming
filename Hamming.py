@@ -1,10 +1,6 @@
 import sys
 
 
-def parity(bits, param):
-    pass
-
-
 class Hamming:
     def encode(self, message):
         """
