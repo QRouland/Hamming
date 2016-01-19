@@ -10,9 +10,9 @@ class NoiseGenerator:
         :param proba: Probablilite d'obtenir True (en %)
         :return: True ou False
         """
-        coefs = {True : proba, False: 100-proba}
+        coefs = {True: proba, False: 100 - proba}
         number = random.random() * sum(coefs.values())
-        for k,v in coefs.items():
+        for k, v in coefs.items():
             if number < v:
                 break
             number -= v
@@ -28,7 +28,7 @@ class NoiseGenerator:
         s = list(string)
         i = 0
         while i < len(s):
-            if NoiseGenerator.bool_random(1):
+            if NoiseGenerator.bool_random(1):  # Définir ici le taux de probabilité de True (1%)
                 s[i] = '1' if (s[i] == '0') else '0'
 
             i += 1
