@@ -1,3 +1,6 @@
+import textwrap
+
+
 class FileUtil:
     @staticmethod
     def read(filepath):
@@ -14,3 +17,18 @@ class FileUtil:
             data = data[:-1]
 
         return data
+
+    @staticmethod
+    def write(filepath, string):
+        """
+        Ecrit dans le fichier entré en paramètre, en le formattant
+        :param filepath: chemin du fichier source
+        :param string: Chaine a écrire dans le fichier
+        """
+        string = '\n'.join(textwrap.wrap(string, 90))
+
+        with open(filepath, 'r') as myfile:
+            myfile.write(string)
+
+
+r = FileUtil.read("source.txt")
