@@ -5,9 +5,9 @@ class NoiseGenerator:
     @staticmethod
     def bool_random(proba):
         """
-        Genere un booleen aleatoire suivant la probabilite entree en parametre,
-        plus elle sera grande, plus le resultat aura de chances d'etre True
-        :param proba: Probablilite d'obtenir True (en %)
+        Génère un booléen aléatoire suivant la probabilité entrée en paramètre,
+        plus elle sera grande, plus le résultat aura de chances d'etre True
+        :param proba: Probablilité d'obtenir True (en %)
         :return: True ou False
         """
         coefs = {True: proba, False: 100 - proba}
