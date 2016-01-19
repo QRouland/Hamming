@@ -27,8 +27,5 @@ class FileUtil:
         """
         string = '\n'.join(textwrap.wrap(string, 90))
 
-        with open(filepath, 'r') as myfile:
+        with open(filepath, 'w+') as myfile:
             myfile.write(string)
-
-
-r = FileUtil.read("source.txt")
