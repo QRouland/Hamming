@@ -1,4 +1,4 @@
-class FileRUtil:
+class FileUtil:
     @staticmethod
     def read(filepath):
         """
