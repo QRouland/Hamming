@@ -28,7 +28,7 @@ FileUtil.write("correct.txt", correct)
 message = ""
 
 while len(correct) >= 7:
-    mot = recu[0:7]
+    mot = correct[0:7]
     message += ham.decode(mot)
     correct = correct[7:]
 
