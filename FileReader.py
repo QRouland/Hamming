@@ -1,13 +1,16 @@
-class FileReader:
-    def __init__(self, filepath):
+class FileRUtil:
+    @staticmethod
+    def read(filepath):
         """
-        Constructeur de la classe, lit le fichier entre en parametre,
-        le rammene a une longueur multiple de 4 et place son contenu dans l'attibut data
+        Lit le fichier entré en paramètre,
+        le rammène à une longueur multiple de 4 et renvoie son contenu
         :param filepath: chemin du fichier source
-        :return: contenu du fichier formatte dans data
+        :return: contenu du fichier formatté
         """
         with open(filepath, 'r') as myfile:
-            self.data = myfile.read().replace('\n', '').replace('\r', '')
+            data = myfile.read().replace('\n', '').replace('\r', '')
 
-        while len(self.data) % 4 != 0:
-            self.data = self.data[:-1]
+        while len(data) % 4 != 0:
+            data = data[:-1]
+
+        return data
